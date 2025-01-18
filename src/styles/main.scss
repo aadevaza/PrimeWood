@@ -1,28 +1,15 @@
 // Import variables
-@import "./_variables.scss";
+@use "./_variables.scss" as *;
+@use "./reset.scss" as *;
 
 // Base styles
 body {
-  font-family: var(--font-primary);
-  background-color: var(--color-background);
-  color: var(--color-text);
-  transition: background-color 0.3s, color 0.3s;
+  background-color: --background-color-white;
+  color: --color-black;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.header {
-  // Header styles
-}
-
-.content {
-  // Content styles
-}
-
-.footer {
-  // Footer styles
+a {
+  text-decoration: none;
 }

@@ -1,0 +1,141 @@
+:root {
+  --color-black: #282828;
+  --color-white: #ffffff;
+  --color-white-smoke: #f5f5f5;
+  --color-dark-grey: #838b8e;
+  --background-color-white: #ffffff;
+  --background-color-green: #55d287;
+  --background-color-yellow: #eeb83b;
+  --background-color-grey: #f6f7f8;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("/fonts/icomoon.eot?d4m6jz");
+  src: url("/fonts/icomoon.eot?d4m6jz#iefix") format("embedded-opentype"),
+    url("/fonts/icomoon.ttf?d4m6jz") format("truetype"),
+    url("/fonts/icomoon.woff?d4m6jz") format("woff"),
+    url("/fonts/icomoon.svg?d4m6jz#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-VK,
+.icon-Telegram,
+.icon-Dzen,
+.icon-yandex {
+  display: flex;
+  justify-content: center;
+}
+
+.icon-Star:before {
+  content: "\e900";
+  color: #eeb83b;
+}
+.icon-yandex .path1:before {
+  content: "\e901";
+  color: rgb(250, 62, 44);
+}
+.icon-yandex .path2:before {
+  content: "\e902";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icon-Dzen .path1:before {
+  content: "\e903";
+  color: rgb(0, 0, 0);
+}
+.icon-Dzen .path2:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+
+.icon-VK .path1:before {
+  content: "\e905";
+  color: rgb(0, 119, 255);
+}
+.icon-VK .path2:before {
+  content: "\e906";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-Telegram .path1:before {
+  content: "\e907";
+  color: rgb(38, 164, 227);
+}
+.icon-Telegram .path2:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+}
+.icon-Whatsapp:before {
+  content: "\e909";
+}
+.icon-Mail:before {
+  content: "\e90a";
+}
+.icon-Call:before {
+  content: "\e90b";
+}
+.icon-Location-f:before {
+  content: "\e90c";
+}
+.icon-Color-palette:before {
+  content: "\e90d";
+  color: #45bedf;
+}
+.icon-Tools:before {
+  content: "\e90e";
+  color: #45bedf;
+}
+.icon-Delivery-truck:before {
+  content: "\e90f";
+  color: #45bedf;
+}
+.icon-Business:before {
+  content: "\e910";
+  color: #45bedf;
+}
+.icon-Geometric:before {
+  content: "\e911";
+  color: #45bedf;
+}
+.icon-24:before {
+  content: "\e912";
+  color: #45bedf;
+}
+.icon-Location:before {
+  content: "\e913";
+  color: #00cddf;
+}
+.icon-Shopping-bag:before {
+  content: "\e914";
+}
+.icon-User:before {
+  content: "\e915";
+}
+.icon-Search:before {
+  content: "\e916";
+}
+.icon-Mobile:before {
+  content: "\e917";
+}
