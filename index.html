@@ -8,7 +8,6 @@
   <body>
     <header class="header">
       <div class="header__container container">
-        <!-- Логотип -->
         <a href="#" class="header__logo-link">
           <img
             src="/images/Logo.svg"
@@ -19,62 +18,75 @@
           />
         </a>
 
-        <!-- Главное меню -->
-        <nav class="header__nav nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Каталог</a></li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Услуги и сервисы</a>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Каталог</a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">О компании</a>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Услуги и сервисы</a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">О компании</a>
             </li>
           </ul>
         </nav>
 
-        <!-- Контактная информация -->
-        <div class="header__contact">
+        <div class="header__extra">
           <div class="header__phone">
-            <span class="icon-Mobile"></span> +7 (123) 456-78-90
+            <a href="tel:+7 (123) 456-78-90"> +7 (123) 456-78-90 </a>
           </div>
 
-          <!-- Дополнительные элементы навигации -->
-          <div class="header__nav-extra">
-            <a
-              href="#"
-              class="header__nav-item icon-Search"
-              aria-label="Search"
-            ></a>
-            <a
-              href="#"
-              class="header__nav-item icon-User"
-              aria-label="User"
-            ></a>
-            <a
-              href="#"
-              class="header__nav-item icon-Shopping-bag"
-              aria-label="Shopping bag"
-            ></a>
-          </div>
+          <ul class="header__nav-extra-list">
+            <li class="header__nav-extra-item">
+              <a
+                href="#"
+                class="header__nav-extra-link icon-Mobile"
+                aria-label="Mobile"
+              ></a>
+            </li>
+            <li class="header__nav-extra-item">
+              <a
+                href="#"
+                class="header__nav-extra-link icon-Search"
+                aria-label="Search"
+              ></a>
+            </li>
+            <li class="header__nav-extra-item">
+              <a
+                href="#"
+                class="header__nav-extra-link icon-User"
+                aria-label="User"
+              ></a>
+            </li>
+            <li class="header__nav-extra-item">
+              <a
+                href="#"
+                class="header__nav-extra-link icon-Shopping-bag"
+                aria-label="Shopping bag"
+              ></a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
+
     <main class="main">
       <div class="main__container container">
         <section class="breadcrumps">
-          <ul class="breadcrumps-list">
-            <li class="breadcrumps-item">
-              <a class="breadcrumps-item-link" href="#">Главная</a>
+          <ul class="breadcrumps__list">
+            <li class="breadcrumps__item">
+              <a class="breadcrumps__item-link" href="#">Главная</a>
             </li>
-            <li class="breadcrumps-item">
-              <a class="breadcrumps-item-link" href="#">О компании</a>
+            <li class="breadcrumps__item">
+              <a class="breadcrumps__item-link" href="#">О компании</a>
             </li>
-            <li class="breadcrumps-item">
-              <a class="breadcrumps-item-link" href="#">Наши проекты</a>
+            <li class="breadcrumps__item">
+              <a class="breadcrumps__item-link" href="#">Наши проекты</a>
             </li>
-            <li class="breadcrumps-item">
+            <li class="breadcrumps__item">
               <a
-                class="breadcrumps-item-link breadcrumps-item-link--active"
+                class="breadcrumps__item-link breadcrumps__item-link--active"
                 href="#"
                 >СИЭНПИ РУС</a
               >
@@ -82,16 +94,16 @@
           </ul>
         </section>
         <section class="teaser">
-          <div class="teaser-content">
-            <h1 class="teaser-title">Шоурумы</h1>
-            <p class="teaser-text">
+          <div class="teaser__content">
+            <h1 class="teaser__title">Шоурумы</h1>
+            <p class="teaser__text">
               Приглашаем Вас посмотреть вживую коллекции офисной мебели для
               персонала, кабинеты для руководителя, офисные диваны, офисные
               кресла и&nbsp;стулья, а&nbsp;также обсудить эргономику вашего
               офисного пространства в&nbsp;наших шоурумах
             </p>
           </div>
-          <picture class="teaser-img">
+          <picture class="teaser__img">
             <source srcset="/images/Map.webp" type="image/webp" />
             <source srcset="/images/Map.jpg" type="image/jpeg" />
             <img src="/images/Map.jpg" alt="Карта" width="808" height="440" />
@@ -119,7 +131,7 @@
               <a href="#" class="showroom__info-link">Посмотреть на карте</a>
             </div>
             <div class="showroom__details">
-              <h3 class="showroom__subtitle">Представлены коллекции</h3>
+              <h3 class="showroom__subtitle">Представлены коллекции:</h3>
               <ul class="showroom__list">
                 <li class="showroom__list-item">
                   <a href="#" class="showroom__list-link"
@@ -187,7 +199,7 @@
               />
             </picture>
           </div>
-          <button class="showroom__button">Записаться в шоурум</button>
+          <button class="showroom__button button">Записаться в шоурум</button>
         </section>
 
         <section class="showroom">
@@ -280,7 +292,7 @@
               />
             </picture>
           </div>
-          <button class="showroom__button">Записаться в шоурум</button>
+          <button class="showroom__button button">Записаться в шоурум</button>
         </section>
 
         <section class="showroom">
@@ -372,7 +384,7 @@
               />
             </picture>
           </div>
-          <button class="showroom__button">Записаться в шоурум</button>
+          <button class="showroom__button button">Записаться в шоурум</button>
         </section>
 
         <section class="features">
@@ -403,54 +415,66 @@
             </li>
           </ul>
         </section>
-
         <section class="application">
           <h2 class="application__title">Записаться в шоурум</h2>
           <form action="" class="application__form">
-            <div class="application__field">
-              <label for="application__name" class="application__label"
-                >Имя</label
+            <div class="application__fields">
+              <div
+                class="application__field-item application__field-item--full"
               >
-              <input
-                type="text"
-                id="application__name"
-                name="name"
-                class="application__input"
-                required
-                autocomplete="name"
-                placeholder="Иван Иванов"
-              />
+                <label for="application__name" class="application__label"
+                  >Имя</label
+                >
+                <input
+                  type="text"
+                  id="application__name"
+                  name="name"
+                  class="application__input"
+                  required
+                  autocomplete="name"
+                  placeholder="Иван Иванов"
+                />
+              </div>
+              <div class="application__field-row">
+                <div
+                  class="application__field-item application__field-item--half"
+                >
+                  <label for="application__phone" class="application__label"
+                    >Телефон</label
+                  >
+                  <input
+                    type="tel"
+                    id="application__phone"
+                    name="phone"
+                    class="application__input"
+                    required
+                    autocomplete="tel"
+                    placeholder="+7 (123) 456-78-90"
+                    pattern="\+?[0-9\s\-\(\)]{7,18}"
+                  />
+                </div>
+                <div
+                  class="application__field-item application__field-item--half"
+                >
+                  <label for="application__email" class="application__label"
+                    >Электронная почта</label
+                  >
+                  <input
+                    type="email"
+                    id="application__email"
+                    name="email"
+                    class="application__input"
+                    required
+                    autocomplete="email"
+                    placeholder="example@example.com"
+                  />
+                </div>
+              </div>
             </div>
-            <div class="application__field">
-              <label for="application__phone" class="application__label"
-                >Телефон</label
-              >
-              <input
-                type="tel"
-                id="application__phone"
-                name="phone"
-                class="application__input"
-                required
-                autocomplete="tel"
-                placeholder="+7 (123) 456-78-90"
-                pattern="\+?[0-9\s\-\(\)]{7,18}"
-              />
-            </div>
-            <div class="application__field">
-              <label for="application__email" class="application__label"
-                >Электронная почта</label
-              >
-              <input
-                type="email"
-                id="application__email"
-                name="email"
-                class="application__input"
-                required
-                autocomplete="email"
-                placeholder="example@example.com"
-              />
-            </div>
-            <button type="submit" class="application__button">Отправить</button>
+
+            <button type="submit" class="application__button button">
+              Отправить
+            </button>
             <p class="application__agreement">
               Нажимая на кнопку, вы подтверждаете свое согласие на обработку
               персональных данных.
@@ -462,8 +486,8 @@
     <footer class="footer">
       <div class="footer__container container">
         <section class="footer__links">
-          <ul class="footer__list">
-            <li class="footer__item">
+          <div class="footer__list-container">
+            <div class="footer__item">
               <h4 class="footer__heading">Каталог</h4>
               <ul class="footer__sublist">
                 <li class="footer__subitem">
@@ -492,68 +516,74 @@
                 </li>
               </ul>
               <a href="#" class="footer__all-link">Весь каталог</a>
-            </li>
-            <li class="footer__item">
+            </div>
+            <div class="footer__item footer__item--two-cols">
               <h4 class="footer__heading">Услуги и сервисы</h4>
-              <ul class="footer__sublist">
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Дизайн-проект офиса</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Мебель на заказ</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Для гос.структур</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Тест драйв мебели</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link"
-                    >Презентационное оборудование</a
-                  >
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Реконфигурация офиса</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Проектный менеджмент</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Дизайнерам и архитекторам</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Дистрибьюция</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Доставка и сборка</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Премиум из Китая</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Офисное оборудование</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Trade in старой мебели</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Релокация офиса</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Европейские фабрики</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link"
-                    >Брокерам, риелторам, застройщикам</a
-                  >
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Архитектурное бюро</a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__item">
+              <div class="footer__sublist-container">
+                <ul class="footer__sublist">
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Дизайн-проект офиса</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Мебель на заказ</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Для гос.структур</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Тест драйв мебели</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link"
+                      >Презентационное оборудование</a
+                    >
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Реконфигурация офиса</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Проектный менеджмент</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link"
+                      >Дизайнерам и архитекторам</a
+                    >
+                  </li>
+                </ul>
+                <ul class="footer__sublist">
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Дистрибьюция</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Доставка и сборка</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Премиум из Китая</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Офисное оборудование</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Trade in старой мебели</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Релокация офиса</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Европейские фабрики</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link"
+                      >Брокерам, риелторам, застройщикам</a
+                    >
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Архитектурное бюро</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__item">
               <h4 class="footer__heading">О компании</h4>
               <ul class="footer__sublist">
                 <li class="footer__subitem">
@@ -581,87 +611,101 @@
                   <a href="#" class="footer__link">Контакты</a>
                 </li>
               </ul>
-            </li>
-          </ul>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <h4 class="footer__heading">Ваш город</h4>
-              <ul class="footer__sublist">
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">
-                    <i class="icon-Location-f"></i>
-                    <span class="footer__location">Москва</span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="footer__item">
-              <h4 class="footer__heading">Контакты</h4>
-              <address class="footer__sublist">
-                <li class="footer__subitem">
-                  <a href="tel:+7 (495) 120-53-91" class="footer__link">
-                    <i class="icon-Call"></i>
-                    <span class="footer__contact-info">+7 (495) 120-53-91</span>
-                  </a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="mailto:info@prime-wood.ru" class="footer__link">
-                    <i class="icon-Mail"></i>
-                    <span class="footer__contact-info">info@prime-wood.ru</span>
-                  </a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link footer__social-link">
-                    <i class="icon-Whatsapp"></i>
-                    <span class="footer__contact-info">Написать в WatsApp</span>
-                  </a>
-                </li>
-              </address>
-            </li>
-            <li class="footer__item">
-              <h4 class="footer__heading">Подписывайтесь</h4>
-              <ul class="footer__sublist">
-                <li class="footer__subitem footer__social-item">
-                  <a href="#" class="footer__social-link icon-Telegram">
-                    <span class="path1"></span>
-                    <span class="path2"></span>
-                  </a>
-                </li>
-                <li class="footer__subitem footer__social-item">
-                  <a href="#" class="footer__social-link icon-VK">
-                    <span class="path1"></span>
-                    <span class="path2"></span>
-                  </a>
-                </li>
-                <li class="footer__subitem footer__social-item">
-                  <a href="#" class="footer__social-link icon-Dzen">
-                    <span class="path1"></span>
-                    <span class="path2"></span>
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+            </div>
+            <div class="footer__item footer__item--box">
+              <div class="footer__item">
+                <h4 class="footer__heading">Ваш город</h4>
+                <ul class="footer__sublist">
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">
+                      <i class="icon-Location-f"></i>
+                      <span class="footer__location">Москва</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__item">
+                <h4 class="footer__heading">Контакты</h4>
+                <ul class="footer__sublist">
+                  <li class="footer__subitem">
+                    <a href="tel:+7 (495) 120-53-91" class="footer__link">
+                      <i class="icon-Call"></i>
+                      <span class="footer__contact-info"
+                        >+7 (495) 120-53-91</span
+                      >
+                    </a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="mailto:info@prime-wood.ru" class="footer__link">
+                      <i class="icon-Mail"></i>
+                      <span class="footer__contact-info"
+                        >info@prime-wood.ru</span
+                      >
+                    </a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link footer__social-link">
+                      <i class="icon-Whatsapp"></i>
+                      <span class="footer__contact-info"
+                        >Написать в WatsApp</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer__item">
+                <h4 class="footer__heading">Подписывайтесь</h4>
+                <ul class="footer__sublist footer__sublist--social">
+                  <li class="footer__subitem footer__social-item">
+                    <a href="#" class="footer__social-link icon-Telegram">
+                      <span class="path1"></span>
+                      <span class="path2"></span>
+                    </a>
+                  </li>
+                  <li class="footer__subitem footer__social-item">
+                    <a href="#" class="footer__social-link icon-VK">
+                      <span class="path1"></span>
+                      <span class="path2"></span>
+                    </a>
+                  </li>
+                  <li class="footer__subitem footer__social-item">
+                    <a href="#" class="footer__social-link icon-Dzen">
+                      <span class="path1"></span>
+                      <span class="path2"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </section>
+
         <section class="footer__bottom">
           <div class="footer__copyright">
-            <small class="footer__legal">
-              © 2013–2024 Компания «Prime Wood» - офисная мебель г. Москва.
-              <br />
-              Все права защищены, нарушения авторских прав будут преследоваться
-              по закону.
-            </small>
-            <div class="footer__rating">
-              <span class="icon-yandex">
-                <span class="path1"></span>
-                <span class="path2"></span>
-              </span>
-              <span class="footer__rating-value">5.0</span>
-              <i class="icon-Star"></i>
-              <i class="icon-Star"></i>
-              <i class="icon-Star"></i>
-              <i class="icon-Star"></i>
-              <i class="icon-Star"></i>
+            <div class="footer__legal-container">
+              <small class="footer__legal">
+                © 2013–2024 Компания «Prime Wood» - офисная мебель г. Москва.
+                <br />
+                Все права защищены, нарушения авторских прав будут
+                преследоваться по закону.
+              </small>
+              <div class="footer__rating-container">
+                <div class="footer__rating">
+                  <span class="icon-yandex">
+                    <span class="path1"></span>
+                    <span class="path2"></span>
+                  </span>
+                  <span class="footer__rating-value">5.0</span>
+                  <i class="icon-Star"></i>
+                  <i class="icon-Star"></i>
+                  <i class="icon-Star"></i>
+                  <i class="icon-Star"></i>
+                  <i class="icon-Star"></i>
+                </div>
+                <p class="footer__rating-description">
+                  Рейтинг организации на Яндексе
+                </p>
+              </div>
             </div>
             <p class="footer__policy">
               Вы принимаете условия политики в отношении обработки персональных

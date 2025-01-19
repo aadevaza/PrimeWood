@@ -1,0 +1,12 @@
+.breadcrumps {
+  padding: 16px 0 32px 0;
+  &__list {
+    display: flex;
+    gap: 18px;
+  }
+
+  &__item-link {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

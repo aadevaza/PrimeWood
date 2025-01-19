@@ -1,0 +1,9 @@
+.teaser {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+
+  &__text {
+    margin-top: 20px;
+  }
+}
