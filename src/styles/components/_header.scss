@@ -1,0 +1,25 @@
+.header {
+  padding: 32px 0;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__extra {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__nav-extra-list {
+    display: flex;
+    gap: 16px;
+  }
+}

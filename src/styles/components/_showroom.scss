@@ -1,0 +1,46 @@
+.showroom {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    display: flex;
+    margin-top: 40px;
+  }
+
+  &__info,
+  &__details {
+    width: 50%;
+  }
+
+  &__info-text:not(:first-child) {
+    margin-top: 8px;
+  }
+
+  &__info-link {
+    display: block;
+    margin-top: 24px;
+  }
+
+  &__list {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__images {
+    margin-top: 40px;
+    display: flex;
+    gap: 32px;
+  }
+
+  &__image img {
+    border-radius: 20px;
+  }
+
+  &__button {
+    max-width: 301px;
+    margin-top: 40px !important;
+  }
+}

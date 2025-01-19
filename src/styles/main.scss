@@ -1,15 +1,18 @@
 // Import variables
-@use "./_variables.scss" as *;
-@use "./reset.scss" as *;
-
-// Base styles
-body {
-  background-color: --background-color-white;
-  color: --color-black;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-a {
-  text-decoration: none;
-}
+@use "./abstracts/variables" as *;
+@use "./abstracts/reset" as *;
+// Import base
+@use "./base/base" as *;
+// Import layout
+@use "./layout/grid" as *;
+// Import components
+@use "./components/icons" as *;
+@use "./components/header" as *;
+@use "./components/breadcrumps" as *;
+@use "./components/teaser" as *;
+@use "./components/showroom" as *;
+@use "./components/features" as *;
+@use "./components/application" as *;
+@use "./components/footer" as *;
+// Import ui
+@use "./ui/button" as *;
