@@ -1,10 +1,11 @@
 @font-face {
   font-family: "icomoon";
-  src: url("/fonts/icomoon.eot?d4m6jz");
-  src: url("/fonts/icomoon.eot?d4m6jz#iefix") format("embedded-opentype"),
-    url("/fonts/icomoon.ttf?d4m6jz") format("truetype"),
-    url("/fonts/icomoon.woff?d4m6jz") format("woff"),
-    url("/fonts/icomoon.svg?d4m6jz#icomoon") format("svg");
+  src: url("/fonts/icomoon/icomoon.eot?d4m6jz");
+  src: url("/fonts/icomoon/icomoon.eot?d4m6jz#iefix")
+      format("embedded-opentype"),
+    url("/fonts/icomoon/icomoon.ttf?d4m6jz") format("truetype"),
+    url("/fonts/icomoon/icomoon.woff?d4m6jz") format("woff"),
+    url("/fonts/icomoon/icomoon.svg?d4m6jz#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -34,6 +35,9 @@
   justify-content: center;
 }
 
+.icon-Arrow:before {
+  content: "\e918";
+}
 .icon-Star:before {
   content: "\e900";
   color: #eeb83b;
@@ -47,7 +51,6 @@
   margin-left: -1em;
   color: rgb(255, 255, 255);
 }
-
 .icon-Dzen .path1:before {
   content: "\e903";
   color: rgb(0, 0, 0);
@@ -57,7 +60,6 @@
   margin-left: -1em;
   color: rgb(255, 255, 255);
 }
-
 .icon-VK .path1:before {
   content: "\e905";
   color: rgb(0, 119, 255);

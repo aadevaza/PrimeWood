@@ -1,6 +1,6 @@
 .footer {
   margin-top: 120px;
-  border: 1px solid var(--color-dark-grey);
+  border-top: 1px solid var(--color-dark-grey);
   padding: 40px 0;
 
   &__links {
@@ -39,26 +39,66 @@
     gap: 12px;
   }
 
+  &__sublist--location {
+    margin-top: 16px;
+  }
+
   &__social-link {
     font-size: 32px;
   }
 
   &__subitem {
-    margin-bottom: 8px;
+    padding: 8px 0;
+  }
+
+  &__subitem--location {
+    padding: 0;
   }
 
   &__link {
+    font-family: "ProximaNova", Arial, sans-serif;
+    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    i {
+      font-size: 24px;
+    }
+  }
+
+  &__location {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
   }
 
   &__all-link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-top: 16px;
+    gap: 8px;
+
+    i {
+      font-size: 24px;
+    }
   }
 
   &__item--two-cols {
     flex: 2;
+  }
+
+  &__contact-info {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+
+    &--tel {
+      font-size: 18px;
+      line-height: 24px;
+    }
   }
 
   &__bottom {
@@ -77,19 +117,45 @@
     justify-content: space-between;
   }
 
+  &__legal {
+    align-self: flex-end;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
   &__rating {
     display: flex;
     align-items: center;
     margin-top: 8px;
+
+    .icon-yandex {
+      font-size: 24px;
+    }
+
+    .icon-Star {
+      font-size: 24px;
+    }
+  }
+
+  &__rating-container {
+    margin-right: 35px;
+  }
+
+  &__rating-description {
+    font-size: 14px;
+    line-height: 20px;
   }
 
   &__rating-value {
     margin: 0 8px;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 600;
   }
 
   &__policy {
     margin-top: 32px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }

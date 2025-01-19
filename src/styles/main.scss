@@ -1,5 +1,6 @@
 // Import variables
 @use "./abstracts/variables" as *;
+@use "./abstracts/fonts" as *;
 @use "./abstracts/reset" as *;
 // Import base
 @use "./base/base" as *;
@@ -16,3 +17,4 @@
 @use "./components/footer" as *;
 // Import ui
 @use "./ui/button" as *;
+@use "./ui/input" as *;

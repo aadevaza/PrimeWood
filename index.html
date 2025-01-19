@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
     <title>Prime Wood</title>
   </head>
   <body>
@@ -34,36 +40,31 @@
 
         <div class="header__extra">
           <div class="header__phone">
-            <a href="tel:+7 (123) 456-78-90"> +7 (123) 456-78-90 </a>
+            <a href="tel:+7 (495) 120-53-91"> +7 (495) 120-53-91 </a>
           </div>
 
           <ul class="header__nav-extra-list">
             <li class="header__nav-extra-item">
-              <a
-                href="#"
-                class="header__nav-extra-link icon-Mobile"
-                aria-label="Mobile"
+              <a href="#" class="header__nav-extra-link" aria-label="Mobile"
+                ><i class="icon-Mobile"></i
+              ></a>
+            </li>
+            <li class="header__nav-extra-item">
+              <a href="#" class="header__nav-extra-link" aria-label="Search"
+                ><i class="icon-Search"></i
+              ></a>
+            </li>
+            <li class="header__nav-extra-item">
+              <a href="#" class="header__nav-extra-link" aria-label="User"
+                ><i class="icon-User"></i
               ></a>
             </li>
             <li class="header__nav-extra-item">
               <a
                 href="#"
-                class="header__nav-extra-link icon-Search"
-                aria-label="Search"
-              ></a>
-            </li>
-            <li class="header__nav-extra-item">
-              <a
-                href="#"
-                class="header__nav-extra-link icon-User"
-                aria-label="User"
-              ></a>
-            </li>
-            <li class="header__nav-extra-item">
-              <a
-                href="#"
-                class="header__nav-extra-link icon-Shopping-bag"
+                class="header__nav-extra-link header__nav-extra-link--shopping-bag"
                 aria-label="Shopping bag"
+                ><i class="icon-Shopping-bag"></i
               ></a>
             </li>
           </ul>
@@ -103,11 +104,13 @@
               офисного пространства в&nbsp;наших шоурумах
             </p>
           </div>
-          <picture class="teaser__img">
-            <source srcset="/images/Map.webp" type="image/webp" />
-            <source srcset="/images/Map.jpg" type="image/jpeg" />
-            <img src="/images/Map.jpg" alt="Карта" width="808" height="440" />
-          </picture>
+          <div class="teaser__map">
+            <picture class="teaser__img">
+              <source srcset="/images/Map.webp" type="image/webp" />
+              <source srcset="/images/Map.jpg" type="image/jpeg" />
+              <img src="/images/Map.jpg" alt="Карта" width="808" height="440" />
+            </picture>
+          </div>
         </section>
 
         <section class="showroom">
@@ -295,8 +298,11 @@
           <button class="showroom__button button">Записаться в шоурум</button>
         </section>
 
-        <section class="showroom">
-          <h2 class="showroom__title">Шоурум в ТЦ ROOMER</h2>
+        <section class="showroom showroom--last">
+          <div class="showroom__header-wrapper">
+            <h2 class="showroom__title">Шоурум в ТЦ ROOMER</h2>
+            <p class="showroom__alert">Скоро открытие</p>
+          </div>
           <div class="showroom__content">
             <div class="showroom__info">
               <p class="showroom__info-text">
@@ -429,10 +435,10 @@
                   type="text"
                   id="application__name"
                   name="name"
-                  class="application__input"
+                  class="application__input input"
                   required
                   autocomplete="name"
-                  placeholder="Иван Иванов"
+                  placeholder="Имя*"
                 />
               </div>
               <div class="application__field-row">
@@ -446,10 +452,10 @@
                     type="tel"
                     id="application__phone"
                     name="phone"
-                    class="application__input"
+                    class="application__input input"
                     required
                     autocomplete="tel"
-                    placeholder="+7 (123) 456-78-90"
+                    placeholder="+7 (999) 999-99-99"
                     pattern="\+?[0-9\s\-\(\)]{7,18}"
                   />
                 </div>
@@ -463,10 +469,10 @@
                     type="email"
                     id="application__email"
                     name="email"
-                    class="application__input"
+                    class="application__input input"
                     required
                     autocomplete="email"
-                    placeholder="example@example.com"
+                    placeholder="Электронная почта"
                   />
                 </div>
               </div>
@@ -515,7 +521,9 @@
                   <a href="#" class="footer__link">Металлическая мебель</a>
                 </li>
               </ul>
-              <a href="#" class="footer__all-link">Весь каталог</a>
+              <a href="#" class="footer__all-link"
+                ><span>Весь каталог</span> <i class="icon-Arrow"></i
+              ></a>
             </div>
             <div class="footer__item footer__item--two-cols">
               <h4 class="footer__heading">Услуги и сервисы</h4>
@@ -549,13 +557,16 @@
                       >Дизайнерам и архитекторам</a
                     >
                   </li>
-                </ul>
-                <ul class="footer__sublist">
                   <li class="footer__subitem">
                     <a href="#" class="footer__link">Дистрибьюция</a>
                   </li>
+                </ul>
+                <ul class="footer__sublist">
                   <li class="footer__subitem">
                     <a href="#" class="footer__link">Доставка и сборка</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Проектный менеджемент</a>
                   </li>
                   <li class="footer__subitem">
                     <a href="#" class="footer__link">Премиум из Китая</a>
@@ -615,8 +626,8 @@
             <div class="footer__item footer__item--box">
               <div class="footer__item">
                 <h4 class="footer__heading">Ваш город</h4>
-                <ul class="footer__sublist">
-                  <li class="footer__subitem">
+                <ul class="footer__sublist footer__sublist--location">
+                  <li class="footer__subitem footer__subitem--location">
                     <a href="#" class="footer__link">
                       <i class="icon-Location-f"></i>
                       <span class="footer__location">Москва</span>
@@ -630,7 +641,8 @@
                   <li class="footer__subitem">
                     <a href="tel:+7 (495) 120-53-91" class="footer__link">
                       <i class="icon-Call"></i>
-                      <span class="footer__contact-info"
+                      <span
+                        class="footer__contact-info footer__contact-info--tel"
                         >+7 (495) 120-53-91</span
                       >
                     </a>

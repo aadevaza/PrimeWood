@@ -1,12 +1,28 @@
 .breadcrumps {
   padding: 16px 0 32px 0;
+
   &__list {
     display: flex;
     gap: 18px;
   }
 
   &__item-link {
+    font-family: "ProximaNova", Arial, sans-serif;
+    font-weight: normal;
     font-size: 14px;
     line-height: 20px;
+    position: relative;
+
+    &--active {
+      color: var(--color-dark-grey);
+    }
+  }
+
+  &__item:not(:first-child) &__item-link::before {
+    content: "/";
+    position: absolute;
+    left: -14px;
+    top: 0;
+    color: var(--color-dark-grey);
   }
 }

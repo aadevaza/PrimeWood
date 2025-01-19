@@ -4,12 +4,13 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 32px;
   }
 
   &__item {
     background-color: var(--background-color-grey);
-    padding: 16px 42.5px 40px;
+    padding: 16px 32.5px;
     border-radius: 20px;
     max-width: 208px;
     width: 100%;
@@ -21,7 +22,8 @@
   }
 
   &__text {
-    font-family: Abel, sans-serif;
+    font-family: "ProximaNova", Arial, sans-serif;
+    font-weight: 600;
     font-size: 18px;
     line-height: 24px;
     margin-top: 8px;
