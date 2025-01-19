@@ -7,6 +7,14 @@
     align-items: center;
   }
 
+  &__logo-link {
+    height: 48px;
+  }
+
+  &__nav {
+    margin-left: 5px;
+  }
+
   &__nav-list {
     display: flex;
     gap: 40px;
@@ -16,10 +24,50 @@
     display: flex;
     align-items: center;
     gap: 16px;
+    margin-left: 10px;
   }
 
   &__nav-extra-list {
     display: flex;
     gap: 16px;
+  }
+
+  &__nav-extra-item {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__nav-extra-link {
+    font-size: 24px;
+    display: flex;
+
+    &--shopping-bag {
+      position: relative;
+
+      &::before {
+        content: "44";
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        font-family: "Montserrat", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 10px;
+        line-height: 140%;
+        background-color: var(--background-color-green);
+        color: var(--color-white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+        top: -10px;
+        right: -11px;
+      }
+    }
   }
 }

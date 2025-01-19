@@ -3,7 +3,19 @@
   align-items: center;
   gap: 48px;
 
+  &__content {
+    max-width: 552px;
+    width: 100%;
+  }
+
   &__text {
+    font-family: "ProximaNova", Arial, sans-serif;
+    font-weight: 600;
     margin-top: 20px;
+  }
+
+  &__img img {
+    max-width: 808px;
+    width: 100%;
   }
 }
