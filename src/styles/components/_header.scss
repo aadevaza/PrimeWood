@@ -221,8 +221,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); // Полупрозрачный фон
-    z-index: 999; // Задаем высокий z-index для оверлея
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
 
     &.active {
       display: block;
@@ -246,7 +246,7 @@
       width: 100%;
     }
     &.active {
-      transform: translateX(0); // Меню выезжает на экран
+      transform: translateX(0);
     }
 
     &__list {
@@ -272,7 +272,7 @@
     }
 
     .header__mobile-phone {
-      margin-top: 20px; // Добавляем отступ для номера телефона внутри мобильного меню
+      margin-top: 20px;
     }
   }
 }
