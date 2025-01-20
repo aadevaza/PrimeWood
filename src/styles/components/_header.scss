@@ -1,23 +1,62 @@
 .header {
   padding: 32px 0;
 
+  @media (max-width: 1147px) {
+    padding: 24px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px 0;
+  }
+
+  @media (max-width: 490px) {
+    padding: 13px;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
 
   &__logo-link {
     height: 48px;
+
+    @media (max-width: 1147px) {
+      height: 40px;
+    }
+  }
+
+  &__logo-img {
+    @media (max-width: 490px) {
+      max-width: 106px;
+    }
   }
 
   &__nav {
     margin-left: 5px;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
   }
 
   &__nav-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
+
+    @media (max-width: 1147px) {
+      gap: 24px;
+    }
+  }
+
+  &__nav-link {
+    @media (max-width: 1147px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   &__extra {
@@ -25,11 +64,103 @@
     align-items: center;
     gap: 16px;
     margin-left: 10px;
+
+    @media (max-width: 1147px) {
+      gap: 8px;
+    }
+
+    .header__burger-menu {
+      display: none;
+
+      @media (max-width: 1023px) {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .header__burger-btn {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1002;
+        padding: 0;
+      }
+
+      .header__burger-btn--open {
+        font-size: 24px;
+        color: var(--color-black);
+      }
+
+      .header__burger-btn--open.active {
+        display: none;
+      }
+
+      .header__burger-btn--close {
+        width: 40px;
+        height: 40px;
+      }
+
+      .header__burger-btn--open + .header__burger-btn--close {
+        display: none;
+      }
+
+      .header__burger-btn--open.active + .header__burger-btn--close {
+        display: block;
+
+        position: relative;
+        text-align: center;
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          width: 12px;
+          height: 1px;
+          background-color: var(--color-black);
+          transform: rotate(45deg);
+          top: 50%;
+          left: 50%;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__phone {
+    @media (max-width: 1147px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    &--desktop {
+      @media (max-width: 1023px) {
+        display: none;
+      }
+    }
   }
 
   &__nav-extra-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
+
+    @media (max-width: 1147px) {
+      gap: 8px;
+    }
+
+    @media (max-width: 490px) {
+      gap: 0;
+    }
   }
 
   &__nav-extra-item {
@@ -38,11 +169,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 1147px) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &__nav-extra-link {
     font-size: 24px;
-    display: flex;
+
+    @media (max-width: 1147px) {
+      font-size: 20px;
+    }
 
     &--shopping-bag {
       position: relative;
@@ -67,7 +206,73 @@
         padding: 2px;
         top: -10px;
         right: -11px;
+
+        @media (max-width: 1147px) {
+          font-size: 10px;
+        }
       }
+    }
+  }
+
+  &__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Полупрозрачный фон
+    z-index: 999; // Задаем высокий z-index для оверлея
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: var(--color-white);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+
+    @media (max-width: 490px) {
+      width: 100%;
+    }
+    &.active {
+      transform: translateX(0); // Меню выезжает на экран
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__item {
+      a {
+        font-size: 18px;
+        line-height: 24px;
+        text-decoration: none;
+        color: var(--color-black);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .header__mobile-phone {
+      margin-top: 20px; // Добавляем отступ для номера телефона внутри мобильного меню
     }
   }
 }

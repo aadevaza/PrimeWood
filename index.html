@@ -23,7 +23,6 @@
             class="header__logo-img"
           />
         </a>
-
         <nav class="header__nav">
           <ul class="header__nav-list">
             <li class="header__nav-item">
@@ -37,12 +36,10 @@
             </li>
           </ul>
         </nav>
-
         <div class="header__extra">
-          <div class="header__phone">
-            <a href="tel:+7 (495) 120-53-91"> +7 (495) 120-53-91 </a>
+          <div class="header__phone header__phone--desktop">
+            <a href="tel:+7 (495) 120-53-91">+7 (495) 120-53-91</a>
           </div>
-
           <ul class="header__nav-extra-list">
             <li class="header__nav-extra-item">
               <a href="#" class="header__nav-extra-link" aria-label="Mobile"
@@ -67,7 +64,21 @@
                 ><i class="icon-Shopping-bag"></i
               ></a>
             </li>
+            <!-- Кнопка бургер-меню -->
+            <li class="header__nav-extra-item header__burger-menu">
+              <button class="header__burger-btn" aria-label="Menu">
+                <i class="header__burger-btn--open icon-Menu-burger"></i>
+                <span class="header__burger-btn--close"></span>
+              </button>
+            </li>
           </ul>
+        </div>
+
+        <!-- Оверлей и выезжающее меню -->
+        <div class="header__overlay"></div>
+        <div class="header__mobile-menu">
+          <div class="header__mobile-menu-close"></div>
+          <ul class="header__mobile-nav-list"></ul>
         </div>
       </div>
     </header>
@@ -118,17 +129,17 @@
           <div class="showroom__content">
             <div class="showroom__info">
               <p class="showroom__info-text">
-                Адрес:
+                <span class="showroom__info-label">Адрес:</span>
                 <span class="showroom__info-value"
-                  >г. Москва, 1-я улица улица Машиностроения, 10</span
+                  >г. Москва, 1-я улица Машиностроения, 10</span
                 >
               </p>
               <p class="showroom__info-text">
-                Телефон:
+                <span class="showroom__info-label">Телефон:</span>
                 <span class="showroom__info-value">+7 (495) 374-93-04</span>
               </p>
               <p class="showroom__info-text">
-                Время работы:
+                <span class="showroom__info-label">Время работы:</span>
                 <span class="showroom__info-value">пн-пт с 8:00 до 20:00</span>
               </p>
               <a href="#" class="showroom__info-link">Посмотреть на карте</a>
@@ -160,47 +171,58 @@
               </ul>
             </div>
           </div>
-          <div class="showroom__images">
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-1.webp" type="image/webp" />
-              <source srcset="/images/showroom-1.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-1.jpg"
-                alt="Шоурум 1"
-                width="328"
-                height="219"
-              />
-            </picture>
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-2.webp" type="image/webp" />
-              <source srcset="/images/showroom-2.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-2.jpg"
-                alt="Шоурум 2"
-                width="328"
-                height="219"
-              />
-            </picture>
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-3.webp" type="image/webp" />
-              <source srcset="/images/showroom-3.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-3.jpg"
-                alt="Шоурум 3"
-                width="328"
-                height="219"
-              />
-            </picture>
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-4.webp" type="image/webp" />
-              <source srcset="/images/showroom-4.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-4.jpg"
-                alt="Шоурум 4"
-                width="328"
-                height="219"
-              />
-            </picture>
+          <div class="showroom__images swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-1.webp" type="image/webp" />
+                  <source srcset="/images/showroom-1.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-1.jpg"
+                    alt="Шоурум 1"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-2.webp" type="image/webp" />
+                  <source srcset="/images/showroom-2.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-2.jpg"
+                    alt="Шоурум 2"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-3.webp" type="image/webp" />
+                  <source srcset="/images/showroom-3.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-3.jpg"
+                    alt="Шоурум 3"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-4.webp" type="image/webp" />
+                  <source srcset="/images/showroom-4.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-4.jpg"
+                    alt="Шоурум 4"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
           </div>
           <button class="showroom__button button">Записаться в шоурум</button>
         </section>
@@ -210,18 +232,18 @@
           <div class="showroom__content">
             <div class="showroom__info">
               <p class="showroom__info-text">
-                Адрес:
+                <span class="showroom__info-label">Адрес:</span>
                 <span class="showroom__info-value"
                   >г. Москва, Пресненская набережная, 6с2, Башня Империя, 50
                   этаж</span
                 >
               </p>
               <p class="showroom__info-text">
-                Телефон:
+                <span class="showroom__info-label">Телефон:</span>
                 <span class="showroom__info-value">+7 (495) 477-57-04</span>
               </p>
               <p class="showroom__info-text">
-                Время работы:
+                <span class="showroom__info-label">Время работы:</span>
                 <span class="showroom__info-value">пн-пт с 9:00 до 19:00</span>
               </p>
               <a href="#" class="showroom__info-link">Посмотреть на карте</a>
@@ -253,47 +275,58 @@
               </ul>
             </div>
           </div>
-          <div class="showroom__images">
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-1.webp" type="image/webp" />
-              <source srcset="/images/showroom-1.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-1.jpg"
-                alt="Шоурум 1"
-                width="328"
-                height="219"
-              />
-            </picture>
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-2.webp" type="image/webp" />
-              <source srcset="/images/showroom-2.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-2.jpg"
-                alt="Шоурум 2"
-                width="328"
-                height="219"
-              />
-            </picture>
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-3.webp" type="image/webp" />
-              <source srcset="/images/showroom-3.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-3.jpg"
-                alt="Шоурум 3"
-                width="328"
-                height="219"
-              />
-            </picture>
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-4.webp" type="image/webp" />
-              <source srcset="/images/showroom-4.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-4.jpg"
-                alt="Шоурум 4"
-                width="328"
-                height="219"
-              />
-            </picture>
+          <div class="showroom__images swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-1.webp" type="image/webp" />
+                  <source srcset="/images/showroom-1.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-1.jpg"
+                    alt="Шоурум 1"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-2.webp" type="image/webp" />
+                  <source srcset="/images/showroom-2.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-2.jpg"
+                    alt="Шоурум 2"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-3.webp" type="image/webp" />
+                  <source srcset="/images/showroom-3.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-3.jpg"
+                    alt="Шоурум 3"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-4.webp" type="image/webp" />
+                  <source srcset="/images/showroom-4.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-4.jpg"
+                    alt="Шоурум 4"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
           </div>
           <button class="showroom__button button">Записаться в шоурум</button>
         </section>
@@ -306,17 +339,17 @@
           <div class="showroom__content">
             <div class="showroom__info">
               <p class="showroom__info-text">
-                Адрес:
+                <span class="showroom__info-label">Адрес:</span>
                 <span class="showroom__info-value"
                   >г. Москва, ул. Ленинская Слобода, д.26</span
                 >
               </p>
               <p class="showroom__info-text">
-                Телефон:
+                <span class="showroom__info-label">Телефон:</span>
                 <span class="showroom__info-value">+7(495) 374-77-97</span>
               </p>
               <p class="showroom__info-text">
-                Время работы:
+                <span class="showroom__info-label">Время работы:</span>
                 <span class="showroom__info-value">с 9:00 до 20:00</span>
               </p>
               <a href="#" class="showroom__info-link">Посмотреть на карте</a>
@@ -348,47 +381,58 @@
               </ul>
             </div>
           </div>
-          <div class="showroom__images">
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-1.webp" type="image/webp" />
-              <source srcset="/images/showroom-1.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-1.jpg"
-                alt="Шоурум 1"
-                width="328"
-                height="219"
-              />
-            </picture>
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-2.webp" type="image/webp" />
-              <source srcset="/images/showroom-2.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-2.jpg"
-                alt="Шоурум 2"
-                width="328"
-                height="219"
-              />
-            </picture>
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-3.webp" type="image/webp" />
-              <source srcset="/images/showroom-3.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-3.jpg"
-                alt="Шоурум 3"
-                width="328"
-                height="219"
-              />
-            </picture>
-            <picture class="showroom__image">
-              <source srcset="/images/showroom-4.webp" type="image/webp" />
-              <source srcset="/images/showroom-4.jpg" type="image/jpeg" />
-              <img
-                src="/images/showroom-4.jpg"
-                alt="Шоурум 4"
-                width="328"
-                height="219"
-              />
-            </picture>
+          <div class="showroom__images swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-1.webp" type="image/webp" />
+                  <source srcset="/images/showroom-1.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-1.jpg"
+                    alt="Шоурум 1"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-2.webp" type="image/webp" />
+                  <source srcset="/images/showroom-2.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-2.jpg"
+                    alt="Шоурум 2"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-3.webp" type="image/webp" />
+                  <source srcset="/images/showroom-3.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-3.jpg"
+                    alt="Шоурум 3"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="showroom__image">
+                  <source srcset="/images/showroom-4.webp" type="image/webp" />
+                  <source srcset="/images/showroom-4.jpg" type="image/jpeg" />
+                  <img
+                    src="/images/showroom-4.jpg"
+                    alt="Шоурум 4"
+                    width="328"
+                    height="219"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
           </div>
           <button class="showroom__button button">Записаться в шоурум</button>
         </section>
@@ -494,52 +538,87 @@
         <section class="footer__links">
           <div class="footer__list-container">
             <div class="footer__item">
-              <h4 class="footer__heading">Каталог</h4>
-              <ul class="footer__sublist">
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Мебель для персонала</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Кабинеты руководителей</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Кресла и стулья</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Переговорные столы</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Офисные диваны</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Домашний офис</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Ресепшены</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Металлическая мебель</a>
-                </li>
-              </ul>
-              <a href="#" class="footer__all-link"
-                ><span>Весь каталог</span> <i class="icon-Arrow"></i
-              ></a>
+              <button class="footer__accordion-button">
+                <h4 class="footer__heading">Каталог</h4>
+                <span class="footer__accordion-icon">
+                  <span
+                    class="footer__accordion-line footer__accordion-line--horizontal"
+                  ></span>
+                  <span
+                    class="footer__accordion-line footer__accordion-line--vertical"
+                  ></span>
+                </span>
+              </button>
+              <div class="footer__accordion-content">
+                <ul class="footer__sublist">
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Мебель для персонала</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Кабинеты руководителей</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Кресла и стулья</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Переговорные столы</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Офисные диваны</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Домашний офис</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Ресепшены</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Металлическая мебель</a>
+                  </li>
+                </ul>
+                <a href="#" class="footer__all-link"
+                  ><span>Весь каталог</span> <i class="icon-Arrow"></i
+                ></a>
+              </div>
             </div>
             <div class="footer__item footer__item--two-cols">
-              <h4 class="footer__heading">Услуги и сервисы</h4>
-              <div class="footer__sublist-container">
+              <button class="footer__accordion-button">
+                <h4 class="footer__heading">Услуги и сервисы</h4>
+                <span class="footer__accordion-icon">
+                  <span
+                    class="footer__accordion-line footer__accordion-line--horizontal"
+                  ></span>
+                  <span
+                    class="footer__accordion-line footer__accordion-line--vertical"
+                  ></span>
+                </span>
+              </button>
+
+              <div class="footer__accordion-content">
                 <ul class="footer__sublist">
                   <li class="footer__subitem">
                     <a href="#" class="footer__link">Дизайн-проект офиса</a>
                   </li>
                   <li class="footer__subitem">
-                    <a href="#" class="footer__link">Мебель на заказ</a>
+                    <a href="#" class="footer__link">Доставка и сборка</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Мебель на заказ </a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Проектный менеджмент</a>
                   </li>
                   <li class="footer__subitem">
                     <a href="#" class="footer__link">Для гос.структур</a>
                   </li>
                   <li class="footer__subitem">
+                    <a href="#" class="footer__link">Премиум из Китая</a>
+                  </li>
+                  <li class="footer__subitem">
                     <a href="#" class="footer__link">Тест драйв мебели</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Офисное оборудование </a>
                   </li>
                   <li class="footer__subitem">
                     <a href="#" class="footer__link"
@@ -547,10 +626,19 @@
                     >
                   </li>
                   <li class="footer__subitem">
+                    <a href="#" class="footer__link">Trade in старой мебели</a>
+                  </li>
+                  <li class="footer__subitem">
                     <a href="#" class="footer__link">Реконфигурация офиса</a>
                   </li>
                   <li class="footer__subitem">
+                    <a href="#" class="footer__link">Релокация офиса</a>
+                  </li>
+                  <li class="footer__subitem">
                     <a href="#" class="footer__link">Проектный менеджмент</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Европейские фабрики</a>
                   </li>
                   <li class="footer__subitem">
                     <a href="#" class="footer__link"
@@ -558,35 +646,12 @@
                     >
                   </li>
                   <li class="footer__subitem">
-                    <a href="#" class="footer__link">Дистрибьюция</a>
-                  </li>
-                </ul>
-                <ul class="footer__sublist">
-                  <li class="footer__subitem">
-                    <a href="#" class="footer__link">Доставка и сборка</a>
-                  </li>
-                  <li class="footer__subitem">
-                    <a href="#" class="footer__link">Проектный менеджемент</a>
-                  </li>
-                  <li class="footer__subitem">
-                    <a href="#" class="footer__link">Премиум из Китая</a>
-                  </li>
-                  <li class="footer__subitem">
-                    <a href="#" class="footer__link">Офисное оборудование</a>
-                  </li>
-                  <li class="footer__subitem">
-                    <a href="#" class="footer__link">Trade in старой мебели</a>
-                  </li>
-                  <li class="footer__subitem">
-                    <a href="#" class="footer__link">Релокация офиса</a>
-                  </li>
-                  <li class="footer__subitem">
-                    <a href="#" class="footer__link">Европейские фабрики</a>
-                  </li>
-                  <li class="footer__subitem">
                     <a href="#" class="footer__link"
                       >Брокерам, риелторам, застройщикам</a
                     >
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Дистрибьюция</a>
                   </li>
                   <li class="footer__subitem">
                     <a href="#" class="footer__link">Архитектурное бюро</a>
@@ -595,33 +660,45 @@
               </div>
             </div>
             <div class="footer__item">
-              <h4 class="footer__heading">О компании</h4>
-              <ul class="footer__sublist">
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">О нас</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Наша команда</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Наши проекты</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Новости</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Отзывы</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Партерам</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Шоурумы</a>
-                </li>
-                <li class="footer__subitem">
-                  <a href="#" class="footer__link">Контакты</a>
-                </li>
-              </ul>
+              <button class="footer__accordion-button">
+                <h4 class="footer__heading">О компании</h4>
+                <span class="footer__accordion-icon">
+                  <span
+                    class="footer__accordion-line footer__accordion-line--horizontal"
+                  ></span>
+                  <span
+                    class="footer__accordion-line footer__accordion-line--vertical"
+                  ></span>
+                </span>
+              </button>
+              <div class="footer__accordion-content">
+                <ul class="footer__sublist">
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">О нас</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Наша команда</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Наши проекты</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Новости</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Отзывы</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Партерам</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Шоурумы</a>
+                  </li>
+                  <li class="footer__subitem">
+                    <a href="#" class="footer__link">Контакты</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="footer__item footer__item--box">
               <div class="footer__item">
@@ -720,9 +797,13 @@
               </div>
             </div>
             <p class="footer__policy">
-              Вы принимаете условия политики в отношении обработки персональных
-              данных и пользовательского соглашения каждый раз, когда оставляете
-              свои данные в любой форме обратной связи на сайте.
+              Вы принимаете
+              <span class="footer__policy-impotant"
+                >условия политики в отношении обработки персональных данных и
+                пользовательского соглашения</span
+              >
+              каждый раз, когда оставляете свои данные в любой форме обратной
+              связи на сайте.
             </p>
           </div>
         </section>

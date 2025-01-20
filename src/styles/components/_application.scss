@@ -5,9 +5,33 @@
   padding: 40px 32px;
   text-align: center;
 
+  @media (max-width: 1147px) {
+    margin-top: 120px;
+    padding: 32px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 124px;
+  }
+
+  @media (max-width: 490px) {
+    margin-top: 80px;
+    padding: 24px 20px;
+  }
+
   &__title {
     font-size: 48px;
     line-height: 56px;
+
+    @media (max-width: 1147px) {
+      font-size: 40px;
+      line-height: 44px;
+    }
+
+    @media (max-width: 490px) {
+      font-style: 32px;
+      line-height: 32px;
+    }
   }
 
   &__form {
@@ -15,17 +39,38 @@
     margin-top: 48px;
     max-width: 600px;
     width: 100%;
+
+    @media (max-width: 1147px) {
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+
+    @media (max-width: 490px) {
+      margin-top: 28px;
+    }
   }
 
   &__fields {
     display: flex;
     flex-direction: column;
     gap: 24px;
+
+    @media (max-width: 490px) {
+      gap: 20px;
+    }
   }
 
   &__field-row {
     display: flex;
     gap: 24px;
+
+    @media (max-width: 490px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__field-item {
@@ -51,12 +96,30 @@
   }
 
   &__button {
-    margin-top: 32px !important;
+    margin-top: 24px !important;
     max-width: 209px;
+
+    @media (max-width: 1147px) {
+      margin-top: 16px !important;
+      max-width: 192px;
+    }
+
+    @media (max-width: 490px) {
+      max-width: 100%;
+      margin-top: 20px;
+    }
   }
 
   &__agreement {
     margin-top: 16px;
-    letter-spacing: -1px;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    @media (max-width: 490px) {
+      margin-top: 12px;
+    }
   }
 }
