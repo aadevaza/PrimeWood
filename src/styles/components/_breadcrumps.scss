@@ -1,9 +1,22 @@
 .breadcrumps {
   padding: 16px 0 32px 0;
 
+  @media (max-width: 1147px) {
+    padding: 12px 0 24px 0;
+  }
+
+  @media (max-width: 490px) {
+    padding: 8px 0 16px 0;
+  }
+
   &__list {
     display: flex;
     gap: 18px;
+    flex-wrap: wrap;
+
+    @media (max-width: 1147px) {
+      gap: 16px;
+    }
   }
 
   &__item-link {
@@ -13,15 +26,20 @@
     line-height: 20px;
     position: relative;
 
+    @media (max-width: 1147px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
     &--active {
       color: var(--color-dark-grey);
     }
   }
 
-  &__item:not(:first-child) &__item-link::before {
+  &__item:not(:last-child) &__item-link::before {
     content: "/";
     position: absolute;
-    left: -14px;
+    right: -8px;
     top: 0;
     color: var(--color-dark-grey);
   }

@@ -9,4 +9,15 @@
   font-size: 18px;
   border: 0;
   border-radius: 16px;
+  transition: ease-in-out 0.3s all;
+  cursor: pointer;
+
+  @media (max-width: 1147px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
